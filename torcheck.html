@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="./icon.gif" />
+<title>Loading...</title>
+</head>
+<body onload="init();">
+<div style="position: fixed;text-decoration: underline;font-size: 100px;top: 50%;left: 50%;transform: translate(-50%,-50%);font-weight: 900;">Loading...</div>
+<script>
+const t=5000;
+const rd="https://check.torproject.org/";
+function redir(){
+    setTimeout(function(){
+        console.log(`Redirecting To "${rd}"...`);
+        window.location.replace(rd);
+    },t);
+}
+function init(){
+    console.log(`Page Loaded!!!\nWaiting ${t}ms To Redirect To "${rd}".`);
+    redir();
+}
+</script>
+</body>
+</html>
